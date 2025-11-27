@@ -54,7 +54,7 @@ protocol LoginScreenProtocol: AnyObject {
         return label
     }()
     
-    lazy var LoginTextField: UITextField = {
+    lazy var emailTextField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
@@ -115,7 +115,7 @@ protocol LoginScreenProtocol: AnyObject {
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.titleLabel?.textAlignment = .center
-        button.addTarget(self, action: #selector(tappedrecoverPasswordButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
     
@@ -179,7 +179,7 @@ protocol LoginScreenProtocol: AnyObject {
         addSubview(logoAppImageView)
         addSubview(loginLabel)
         addSubview(descriptionLabel)
-        addSubview(LoginTextField)
+        addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(recoverPasswordButton)
         addSubview(subLoginImageView)
@@ -211,23 +211,23 @@ protocol LoginScreenProtocol: AnyObject {
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10),
             
             
-            LoginTextField.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 32),
-            LoginTextField.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 20),
-            LoginTextField.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
-            LoginTextField.heightAnchor.constraint(equalToConstant: 39),
+            emailTextField.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 32),
+            emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
+            emailTextField.heightAnchor.constraint(equalToConstant: 39),
             
-            passwordTextField.topAnchor.constraint(equalTo: LoginTextField.bottomAnchor, constant: 11 ),
-            passwordTextField.leadingAnchor.constraint(equalTo: LoginTextField.leadingAnchor),
-            passwordTextField.trailingAnchor.constraint(equalTo: LoginTextField.trailingAnchor),
-            passwordTextField.heightAnchor.constraint(equalTo: LoginTextField.heightAnchor),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 11 ),
+            passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
             recoverPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 9),
-            recoverPasswordButton.trailingAnchor.constraint(equalTo: LoginTextField.trailingAnchor),
+            recoverPasswordButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             recoverPasswordButton.heightAnchor.constraint(equalToConstant: 16),
             
             subLoginImageView.topAnchor.constraint(equalTo: recoverPasswordButton.bottomAnchor, constant: 36),
-            subLoginImageView.leadingAnchor.constraint(equalTo: LoginTextField.leadingAnchor),
-            subLoginImageView.trailingAnchor.constraint(equalTo:LoginTextField.trailingAnchor),
+            subLoginImageView.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            subLoginImageView.trailingAnchor.constraint(equalTo:emailTextField.trailingAnchor),
             subLoginImageView.heightAnchor.constraint(equalToConstant: 43),
             
             
@@ -256,6 +256,11 @@ protocol LoginScreenProtocol: AnyObject {
         ])
     }
     
+        func configTextFieldsDelegate(delegate: UITextFieldDelegate) {
+            emailTextField.delegate = delegate
+            passwordTextField.delegate = delegate
+            
+        }
     
     
 }
