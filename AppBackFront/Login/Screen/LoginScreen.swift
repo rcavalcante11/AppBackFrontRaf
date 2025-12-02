@@ -50,7 +50,7 @@ protocol LoginScreenProtocol: AnyObject {
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .center
-        label.text = "O marketplace de NFTs da Backfront academy"
+        label.text = "The NFTs Marketplace from Backfront academy"
         return label
     }()
     
@@ -90,7 +90,7 @@ protocol LoginScreenProtocol: AnyObject {
     lazy var recoverPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Recuperar senha", for: .normal)
+        button.setTitle("Recover Password", for: .normal)
         button.setTitleColor(UIColor(red: 231/255, green: 48/255, blue: 214/255, alpha: 1.0), for: .normal)
         button.addTarget(self, action: #selector(tappedrecoverPasswordButton), for: .touchUpInside)
         return button
@@ -109,7 +109,7 @@ protocol LoginScreenProtocol: AnyObject {
     lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Entrar", for: .normal)
+        button.setTitle("Enter", for: .normal)
         button.setTitleColor( .white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.clipsToBounds = true
@@ -148,7 +148,7 @@ protocol LoginScreenProtocol: AnyObject {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.text = "Entrar com a Meta Mask"
+        label.text = "Enter with Metamask"
         return label
     }()
     
