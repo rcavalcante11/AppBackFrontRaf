@@ -13,7 +13,10 @@
 		FA0C96922E132BC60017A1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0C96912E132BC60017A1AF /* Assets.xcassets */; };
 		FA0C96952E132BC60017A1AF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA0C96942E132BC60017A1AF /* Base */; };
 		FA2DCD632ED74A1900282E93 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD622ED74A1900282E93 /* AlertController.swift */; };
+		FA2DCD662EDF34F400282E93 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD652EDF34F400282E93 /* TabBarVC.swift */; };
+		FA2DCD6A2EDF395B00282E93 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD692EDF395B00282E93 /* HomeVC.swift */; };
 		FA9457652ECB4D9600DBE62A /* String + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9457642ECB4D9600DBE62A /* String + extension.swift */; };
+		FABE9EEC2EE052B900C337BE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE9EEB2EE052B900C337BE /* HomeScreen.swift */; };
 		FAD0B4662EC6360A003E0F67 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0B4652EC6360A003E0F67 /* UIViewController+Extension.swift */; };
 		FADE5D552EC4E60400DBDFCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FADE5D542EC4E60400DBDFCA /* GoogleService-Info.plist */; };
 		FADE5D582EC4E6AF00DBDFCA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FADE5D572EC4E6AF00DBDFCA /* FirebaseAuth */; };
@@ -30,7 +33,10 @@
 		FA0C96942E132BC60017A1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0C96962E132BC60017A1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2DCD622ED74A1900282E93 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		FA2DCD652EDF34F400282E93 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		FA2DCD692EDF395B00282E93 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FA9457642ECB4D9600DBE62A /* String + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + extension.swift"; sourceTree = "<group>"; };
+		FABE9EEB2EE052B900C337BE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		FAD0B4652EC6360A003E0F67 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FADE5D542EC4E60400DBDFCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAE77AB02E142E210011AA19 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -52,6 +58,7 @@
 		FA0C967C2E132BC50017A1AF = {
 			isa = PBXGroup;
 			children = (
+				FA2DCD642EDF349D00282E93 /* TabBarController */,
 				FA2DCD612ED7442900282E93 /* Alert */,
 				FAD0B4632EC6349C003E0F67 /* Utils */,
 				FA0C96872E132BC50017A1AF /* AppBackFront */,
@@ -70,7 +77,6 @@
 		FA0C96872E132BC50017A1AF /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
-				FADE5D522EC4DB1200DBDFCA /* Login */,
 				FA0C96882E132BC50017A1AF /* AppDelegate.swift */,
 				FA0C968A2E132BC50017A1AF /* SceneDelegate.swift */,
 				FA0C96912E132BC60017A1AF /* Assets.xcassets */,
@@ -87,6 +93,41 @@
 				FA2DCD622ED74A1900282E93 /* AlertController.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		FA2DCD642EDF349D00282E93 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				FA2DCD672EDF384600282E93 /* Feature */,
+				FA2DCD652EDF34F400282E93 /* TabBarVC.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		FA2DCD672EDF384600282E93 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				FA2DCD682EDF390F00282E93 /* Home */,
+				FADE5D522EC4DB1200DBDFCA /* Login */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		FA2DCD682EDF390F00282E93 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FABE9EEA2EE051E200C337BE /* Screen */,
+				FA2DCD692EDF395B00282E93 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FABE9EEA2EE051E200C337BE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				FABE9EEB2EE052B900C337BE /* HomeScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		FAD0B4632EC6349C003E0F67 /* Utils */ = {
@@ -200,9 +241,12 @@
 				FA0C968D2E132BC50017A1AF /* LoginVC.swift in Sources */,
 				FAE77AB12E142E210011AA19 /* LoginScreen.swift in Sources */,
 				FA9457652ECB4D9600DBE62A /* String + extension.swift in Sources */,
+				FA2DCD6A2EDF395B00282E93 /* HomeVC.swift in Sources */,
 				FA0C96892E132BC50017A1AF /* AppDelegate.swift in Sources */,
 				FA2DCD632ED74A1900282E93 /* AlertController.swift in Sources */,
+				FABE9EEC2EE052B900C337BE /* HomeScreen.swift in Sources */,
 				FAD0B4662EC6360A003E0F67 /* UIViewController+Extension.swift in Sources */,
+				FA2DCD662EDF34F400282E93 /* TabBarVC.swift in Sources */,
 				FA0C968B2E132BC50017A1AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
