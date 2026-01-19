@@ -22,9 +22,13 @@
 		FADE5D582EC4E6AF00DBDFCA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FADE5D572EC4E6AF00DBDFCA /* FirebaseAuth */; };
 		FADE5D5A2EC4E6AF00DBDFCA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FADE5D592EC4E6AF00DBDFCA /* FirebaseCrashlytics */; };
 		FAE77AB12E142E210011AA19 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE77AB02E142E210011AA19 /* LoginScreen.swift */; };
+		FB4A142933034ABCE4C90234 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1415AA855D85130B77B53AB5 /* Pods_AppBackFront.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1415AA855D85130B77B53AB5 /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47594EB31FF23BE08B410C2C /* Pods-AppBackFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.release.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.release.xcconfig"; sourceTree = "<group>"; };
+		C652DEBD59EE0D91A6DA9C7E /* Pods-AppBackFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.debug.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0C96852E132BC50017A1AF /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0C96882E132BC50017A1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA0C968A2E132BC50017A1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,12 +53,30 @@
 			files = (
 				FADE5D582EC4E6AF00DBDFCA /* FirebaseAuth in Frameworks */,
 				FADE5D5A2EC4E6AF00DBDFCA /* FirebaseCrashlytics in Frameworks */,
+				FB4A142933034ABCE4C90234 /* Pods_AppBackFront.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		858A80A9A44CCC691FE7E165 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C652DEBD59EE0D91A6DA9C7E /* Pods-AppBackFront.debug.xcconfig */,
+				47594EB31FF23BE08B410C2C /* Pods-AppBackFront.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AAE52215AF79C4FFFC663A00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1415AA855D85130B77B53AB5 /* Pods_AppBackFront.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA0C967C2E132BC50017A1AF = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +85,8 @@
 				FAD0B4632EC6349C003E0F67 /* Utils */,
 				FA0C96872E132BC50017A1AF /* AppBackFront */,
 				FA0C96862E132BC50017A1AF /* Products */,
+				858A80A9A44CCC691FE7E165 /* Pods */,
+				AAE52215AF79C4FFFC663A00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA0C96992E132BC60017A1AF /* Build configuration list for PBXNativeTarget "AppBackFront" */;
 			buildPhases = (
+				51EDAF255BFA1FDA68E9E28B /* [CP] Check Pods Manifest.lock */,
 				FA0C96812E132BC50017A1AF /* Sources */,
 				FA0C96822E132BC50017A1AF /* Frameworks */,
 				FA0C96832E132BC50017A1AF /* Resources */,
+				806C13ED32C984EF34114E79 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +258,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51EDAF255BFA1FDA68E9E28B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppBackFront-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		806C13ED32C984EF34114E79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA0C96812E132BC50017A1AF /* Sources */ = {
@@ -302,7 +370,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -366,7 +434,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -388,12 +456,14 @@
 		};
 		FA0C969A2E132BC60017A1AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C652DEBD59EE0D91A6DA9C7E /* Pods-AppBackFront.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G46GV39GZQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppBackFront/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -406,8 +476,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = backfroont.AppBackFrontRaf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.backfroont.AppBackFrontRaf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -420,9 +491,11 @@
 		};
 		FA0C969B2E132BC60017A1AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47594EB31FF23BE08B410C2C /* Pods-AppBackFront.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G46GV39GZQ;
@@ -438,8 +511,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = backfroont.AppBackFrontRaf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.backfroont.AppBackFrontRaf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

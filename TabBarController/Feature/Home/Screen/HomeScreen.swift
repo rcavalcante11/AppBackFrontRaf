@@ -23,7 +23,7 @@ class HomeScreen: UIView {
         return imageView
     }()
     
-    lazy var searchbar: UISearchBar = {
+    lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.clipsToBounds = true
@@ -55,6 +55,21 @@ class HomeScreen: UIView {
         
     }()
     
+    func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        tableview.delegate = delegate
+        tableview.dataSource = dataSource
+    }
+    
+    
+    func configcollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
+    
+    func configSearchBarDelegate(delegate: UISearchBarDelegate) {
+        searchBar.delegate = delegate
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor(red: 26/255, green:26/255,blue: 1/255, alpha: 1.0)
@@ -65,7 +80,7 @@ class HomeScreen: UIView {
     func addviews() {
         addSubview(viewBackground)
         viewBackground.addSubview(logoImageView)
-        viewBackground.addSubview(searchbar)
+        viewBackground.addSubview(searchBar)
         viewBackground.addSubview(collectionView)
         addSubview(tableview)
     }
@@ -79,19 +94,19 @@ class HomeScreen: UIView {
             viewBackground.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
             viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
-            viewBackground.heightAnchor.constraint(equalToConstant: 220),
+            viewBackground.heightAnchor.constraint(equalToConstant: 200),
             
-            logoImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 45),
+            logoImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 5),
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             logoImageView.heightAnchor.constraint(equalToConstant: 40),
             logoImageView.widthAnchor.constraint(equalToConstant: 40),
             
-            searchbar.topAnchor.constraint(equalTo: logoImageView.topAnchor, constant: 10),
-            searchbar.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor),
-            searchbar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
-            searchbar.heightAnchor.constraint(equalToConstant: 46),
+            searchBar.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 10),
+            searchBar.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+            searchBar.heightAnchor.constraint(equalToConstant: 46),
             
-            collectionView.topAnchor.constraint(equalTo: searchbar.bottomAnchor, constant: 15),
+            collectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 15),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: viewBackground.bottomAnchor),
