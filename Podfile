@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '17.5'
+# platform :ios, '12.0'
 
 target 'AppBackFront' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,8 +7,8 @@ target 'AppBackFront' do
 
   # Pods for AppBackFront
 
-pod 'Alamofire'
-pod 'AlamofireImage'
+pod 'Alamofire', '~> 5.9'
+ pod 'AlamofireImage', '~> 4.3'
 
 
 end

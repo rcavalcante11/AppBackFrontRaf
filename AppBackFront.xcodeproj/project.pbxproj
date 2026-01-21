@@ -16,6 +16,9 @@
 		FA2DCD662EDF34F400282E93 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD652EDF34F400282E93 /* TabBarVC.swift */; };
 		FA2DCD6A2EDF395B00282E93 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD692EDF395B00282E93 /* HomeVC.swift */; };
 		FA9457652ECB4D9600DBE62A /* String + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9457642ECB4D9600DBE62A /* String + extension.swift */; };
+		FA9CADFE2F2125790020452E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CADFD2F2125790020452E /* HomeViewModel.swift */; };
+		FA9CAE022F2126E70020452E /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CAE012F2126E70020452E /* HomeService.swift */; };
+		FA9CAE042F21278F0020452E /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CAE032F21278F0020452E /* GenericService.swift */; };
 		FABE9EEC2EE052B900C337BE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE9EEB2EE052B900C337BE /* HomeScreen.swift */; };
 		FAD0B4662EC6360A003E0F67 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0B4652EC6360A003E0F67 /* UIViewController+Extension.swift */; };
 		FADE5D552EC4E60400DBDFCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FADE5D542EC4E60400DBDFCA /* GoogleService-Info.plist */; };
@@ -40,6 +43,9 @@
 		FA2DCD652EDF34F400282E93 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		FA2DCD692EDF395B00282E93 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FA9457642ECB4D9600DBE62A /* String + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + extension.swift"; sourceTree = "<group>"; };
+		FA9CADFD2F2125790020452E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FA9CAE012F2126E70020452E /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		FA9CAE032F21278F0020452E /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		FABE9EEB2EE052B900C337BE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		FAD0B4652EC6360A003E0F67 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FADE5D542EC4E60400DBDFCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2DCD642EDF349D00282E93 /* TabBarController */,
+				FA2DCD672EDF384600282E93 /* Feature */,
 				FA2DCD612ED7442900282E93 /* Alert */,
 				FAD0B4632EC6349C003E0F67 /* Utils */,
 				FA0C96872E132BC50017A1AF /* AppBackFront */,
@@ -122,7 +129,6 @@
 		FA2DCD642EDF349D00282E93 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				FA2DCD672EDF384600282E93 /* Feature */,
 				FA2DCD652EDF34F400282E93 /* TabBarVC.swift */,
 			);
 			path = TabBarController;
@@ -131,6 +137,7 @@
 		FA2DCD672EDF384600282E93 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CADFF2F2126AF0020452E /* Service */,
 				FA2DCD682EDF390F00282E93 /* Home */,
 				FADE5D522EC4DB1200DBDFCA /* Login */,
 			);
@@ -140,10 +147,36 @@
 		FA2DCD682EDF390F00282E93 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CADFC2F2125410020452E /* ViewModel */,
 				FABE9EEA2EE051E200C337BE /* Screen */,
 				FA2DCD692EDF395B00282E93 /* HomeVC.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FA9CADFC2F2125410020452E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA9CADFD2F2125790020452E /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA9CADFF2F2126AF0020452E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA9CAE002F2126C10020452E /* HomeService */,
+				FA9CAE032F21278F0020452E /* GenericService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FA9CAE002F2126C10020452E /* HomeService */ = {
+			isa = PBXGroup;
+			children = (
+				FA9CAE012F2126E70020452E /* HomeService.swift */,
+			);
+			path = HomeService;
 			sourceTree = "<group>";
 		};
 		FABE9EEA2EE051E200C337BE /* Screen */ = {
@@ -218,7 +251,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					FA0C96842E132BC50017A1AF = {
 						CreatedOnToolsVersion = 15.4;
@@ -290,9 +323,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -307,10 +344,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0C968D2E132BC50017A1AF /* LoginVC.swift in Sources */,
+				FA9CADFE2F2125790020452E /* HomeViewModel.swift in Sources */,
 				FAE77AB12E142E210011AA19 /* LoginScreen.swift in Sources */,
 				FA9457652ECB4D9600DBE62A /* String + extension.swift in Sources */,
 				FA2DCD6A2EDF395B00282E93 /* HomeVC.swift in Sources */,
 				FA0C96892E132BC50017A1AF /* AppDelegate.swift in Sources */,
+				FA9CAE042F21278F0020452E /* GenericService.swift in Sources */,
+				FA9CAE022F2126E70020452E /* HomeService.swift in Sources */,
 				FA2DCD632ED74A1900282E93 /* AlertController.swift in Sources */,
 				FABE9EEC2EE052B900C337BE /* HomeScreen.swift in Sources */,
 				FAD0B4662EC6360A003E0F67 /* UIViewController+Extension.swift in Sources */,
@@ -387,6 +427,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -445,6 +486,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -471,6 +513,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,6 +549,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
