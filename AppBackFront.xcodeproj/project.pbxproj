@@ -86,11 +86,11 @@
 		FA0C967C2E132BC50017A1AF = {
 			isa = PBXGroup;
 			children = (
-				FA2DCD642EDF349D00282E93 /* TabBarController */,
+				FA0C96872E132BC50017A1AF /* AppBackFront */,
 				FA2DCD672EDF384600282E93 /* Feature */,
 				FA2DCD612ED7442900282E93 /* Alert */,
 				FAD0B4632EC6349C003E0F67 /* Utils */,
-				FA0C96872E132BC50017A1AF /* AppBackFront */,
+				FA2DCD642EDF349D00282E93 /* TabBarController */,
 				FA0C96862E132BC50017A1AF /* Products */,
 				858A80A9A44CCC691FE7E165 /* Pods */,
 				AAE52215AF79C4FFFC663A00 /* Frameworks */,
@@ -108,6 +108,8 @@
 		FA0C96872E132BC50017A1AF /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
+				FA3721092F22702B00D34B2D /* Json */,
+				FA9CADFF2F2126AF0020452E /* Service */,
 				FA0C96882E132BC50017A1AF /* AppDelegate.swift */,
 				FA0C968A2E132BC50017A1AF /* SceneDelegate.swift */,
 				FA0C96912E132BC60017A1AF /* Assets.xcassets */,
@@ -137,7 +139,6 @@
 		FA2DCD672EDF384600282E93 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				FA9CADFF2F2126AF0020452E /* Service */,
 				FA2DCD682EDF390F00282E93 /* Home */,
 				FADE5D522EC4DB1200DBDFCA /* Login */,
 			);
@@ -152,6 +153,13 @@
 				FA2DCD692EDF395B00282E93 /* HomeVC.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FA3721092F22702B00D34B2D /* Json */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		FA9CADFC2F2125410020452E /* ViewModel */ = {
