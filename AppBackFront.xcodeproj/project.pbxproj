@@ -15,6 +15,8 @@
 		FA2DCD632ED74A1900282E93 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD622ED74A1900282E93 /* AlertController.swift */; };
 		FA2DCD662EDF34F400282E93 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD652EDF34F400282E93 /* TabBarVC.swift */; };
 		FA2DCD6A2EDF395B00282E93 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD692EDF395B00282E93 /* HomeVC.swift */; };
+		FA2E447C2F2780CB004E6B0A /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA2E447B2F2780CB004E6B0A /* HomeData.json */; };
+		FA2E447F2F278AC2004E6B0A /* NFTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2E447E2F278AC2004E6B0A /* NFTData.swift */; };
 		FA9457652ECB4D9600DBE62A /* String + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9457642ECB4D9600DBE62A /* String + extension.swift */; };
 		FA9CADFE2F2125790020452E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CADFD2F2125790020452E /* HomeViewModel.swift */; };
 		FA9CAE022F2126E70020452E /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CAE012F2126E70020452E /* HomeService.swift */; };
@@ -42,6 +44,8 @@
 		FA2DCD622ED74A1900282E93 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		FA2DCD652EDF34F400282E93 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		FA2DCD692EDF395B00282E93 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		FA2E447B2F2780CB004E6B0A /* HomeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
+		FA2E447E2F278AC2004E6B0A /* NFTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTData.swift; sourceTree = "<group>"; };
 		FA9457642ECB4D9600DBE62A /* String + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + extension.swift"; sourceTree = "<group>"; };
 		FA9CADFD2F2125790020452E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FA9CAE012F2126E70020452E /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 		FA0C96872E132BC50017A1AF /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E447D2F278A95004E6B0A /* Model */,
 				FA3721092F22702B00D34B2D /* Json */,
 				FA9CADFF2F2126AF0020452E /* Service */,
 				FA0C96882E132BC50017A1AF /* AppDelegate.swift */,
@@ -155,9 +160,18 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		FA2E447D2F278A95004E6B0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA2E447E2F278AC2004E6B0A /* NFTData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FA3721092F22702B00D34B2D /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E447B2F2780CB004E6B0A /* HomeData.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -292,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2E447C2F2780CB004E6B0A /* HomeData.json in Resources */,
 				FA0C96922E132BC60017A1AF /* Assets.xcassets in Resources */,
 				FADE5D552EC4E60400DBDFCA /* GoogleService-Info.plist in Resources */,
 				FA0C96952E132BC60017A1AF /* Base in Resources */,
@@ -361,6 +376,7 @@
 				FA9CAE022F2126E70020452E /* HomeService.swift in Sources */,
 				FA2DCD632ED74A1900282E93 /* AlertController.swift in Sources */,
 				FABE9EEC2EE052B900C337BE /* HomeScreen.swift in Sources */,
+				FA2E447F2F278AC2004E6B0A /* NFTData.swift in Sources */,
 				FAD0B4662EC6360A003E0F67 /* UIViewController+Extension.swift in Sources */,
 				FA2DCD662EDF34F400282E93 /* TabBarVC.swift in Sources */,
 				FA0C968B2E132BC50017A1AF /* SceneDelegate.swift in Sources */,

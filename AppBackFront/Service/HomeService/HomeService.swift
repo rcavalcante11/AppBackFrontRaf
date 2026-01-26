@@ -8,11 +8,25 @@
 import UIKit
 
 protocol HomeServiceDelegate: GenericService {
-//    func getHomeFromJson (completion: @escaping completion <>)
+    func getHomeFromJson(completion: @escaping Completion<NFTData?>)
 }
 
-class HomeService {
+class HomeService: HomeServiceDelegate{
     
+    
+    func getHomeFromJson(completion: @escaping Completion<NFTData?>) {
+        if let url = Bundle.main.url(forResource: "HomeData", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let nftData: NFTData = try JSONDecoder().decode(NFTData.self, from: data)
+                completion(nftData,nil)
+            } catch {
+                completion(nil, Error.fileDecoding(name: "HomeData", error))
+            }
+        } else {
+            completion(nil, Error.fileNotFound(name: "HomeData"))
+        }
+        }
     
 
 }
