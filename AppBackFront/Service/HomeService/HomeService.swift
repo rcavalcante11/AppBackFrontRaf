@@ -11,9 +11,8 @@ protocol HomeServiceDelegate: GenericService {
     func getHomeFromJson(completion: @escaping Completion<NFTData?>)
 }
 
-class HomeService: HomeServiceDelegate{
-    
-    
+class HomeService: HomeServiceDelegate {
+
     func getHomeFromJson(completion: @escaping Completion<NFTData?>) {
         if let url = Bundle.main.url(forResource: "HomeData", withExtension: "json") {
             do {
@@ -21,7 +20,7 @@ class HomeService: HomeServiceDelegate{
                 let nftData: NFTData = try JSONDecoder().decode(NFTData.self, from: data)
                 completion(nftData,nil)
             } catch {
-                completion(nil, Error.fileDecoding(name: "HomeData", error))
+                completion(nil, Error.fileDecodingFailed(name: "HomeData", error))
             }
         } else {
             completion(nil, Error.fileNotFound(name: "HomeData"))

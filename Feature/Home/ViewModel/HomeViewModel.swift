@@ -8,7 +8,15 @@
 import UIKit
 
 class HomeViewModel {
-
     
+    private let service: HomeService = HomeService()
     
-}
+    public func fetchrequest() {
+        service.getHomeFromJson{ result, failure in
+            if  let result { print("Success")}
+            else{ print("pobrema")}
+                
+            }
+        }
+            
+    }

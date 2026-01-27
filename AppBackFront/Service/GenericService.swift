@@ -10,7 +10,7 @@ import Alamofire
 
 enum Error: Swift.Error {
     case fileNotFound(name : String)
-    case fileDecoding(name: String, Swift.Error)
+    case fileDecodingFailed(name: String, Swift.Error)
     case errorRequest(AFError)
 }
 
