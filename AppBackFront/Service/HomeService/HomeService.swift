@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol HomeServiceDelegate: GenericService {
     func getHomeFromJson(completion: @escaping Completion<NFTData?>)
+    func getHome(completion: @escaping Completion<NFTData?>)
 }
 
 class HomeService: HomeServiceDelegate {
+    func getHome(completion: @escaping Completion<NFTData?>) {
+    
+    }
+    
 
     func getHomeFromJson(completion: @escaping Completion<NFTData?>) {
         if let url = Bundle.main.url(forResource: "HomeData", withExtension: "json") {
