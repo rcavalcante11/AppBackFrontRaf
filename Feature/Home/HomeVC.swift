@@ -26,7 +26,7 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchrequest()
+        viewModel.fetchRequest(.request)
 
     }
     
