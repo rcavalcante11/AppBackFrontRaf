@@ -15,16 +15,16 @@ protocol HomeServiceDelegate: GenericService {
 
 class HomeService: HomeServiceDelegate {
     func getHome(completion: @escaping Completion<NFTData?>) {
-        let url : String = "/Users/macbook/Desktop/PROJETOS BACKFRONT/AppBackFront/AppBackFront/Json/HomeData.json"
+        let url : String = "https://bafrontjson.free.beeceptor.com/home"
         
         AF.request(url, method: .get).validate(statusCode: 200...299).responseDecodable(of: NFTData.self) {response in
         debugPrint(response)
             switch response.result{
-            case .success(let Success):
-                print ("Success caraio \(#function)")
-                completion(Success, nil)
+            case .success(let success):
+                print ("Success caraio ->\(#function)")
+                completion(success, nil)
             case .failure(let error ):
-                print ("error \(#function)")
+                print ("error -> \(#function)")
                 completion(nil, Error.errorRequest(error))
             }
         }

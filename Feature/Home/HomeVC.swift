@@ -26,11 +26,22 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchRequest(.request)
-
+        viewModel.delegate(delegate: self)
+        viewModel.fetchRequest(.mock)
+        
     }
     
 
-
-
 }
+
+extension HomeVC: HomeViewModelDelegate{
+    func success() {
+        print(#function)
+    }
+    
+    func error() {
+        print(#function)
+    }
+    
+}
+
