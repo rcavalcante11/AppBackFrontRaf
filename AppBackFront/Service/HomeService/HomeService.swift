@@ -14,8 +14,9 @@ protocol HomeServiceDelegate: GenericService {
 }
 
 class HomeService: HomeServiceDelegate {
+    
     func getHome(completion: @escaping Completion<NFTData?>) {
-        let url : String = "https://bafrontjson.free.beeceptor.com/home"
+    let url : String = "https://gist.githubusercontent.com/rcavalcante11/b6c76c2e801863fe107a5da8932d123f/raw/87b184d65beb900e6d092782bfb0a70d8e9b244d/home.json"
         
         AF.request(url, method: .get).validate(statusCode: 200...299).responseDecodable(of: NFTData.self) {response in
         debugPrint(response)

@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate(delegate: self)
-        viewModel.fetchRequest(.mock)
+        viewModel.fetchRequest(.request)
         
     }
     

@@ -27,6 +27,8 @@
 		FADE5D582EC4E6AF00DBDFCA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FADE5D572EC4E6AF00DBDFCA /* FirebaseAuth */; };
 		FADE5D5A2EC4E6AF00DBDFCA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FADE5D592EC4E6AF00DBDFCA /* FirebaseCrashlytics */; };
 		FAE77AB12E142E210011AA19 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE77AB02E142E210011AA19 /* LoginScreen.swift */; };
+		FAEF3DFC2F509E5900C2F78F /* NftFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF3DFB2F509E5900C2F78F /* NftFilterCollectionViewCell.swift */; };
+		FAEF3DFF2F509F1900C2F78F /* NftFilterCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF3DFE2F509F1900C2F78F /* NftFilterCollectionViewCellScreen.swift */; };
 		FB4A142933034ABCE4C90234 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1415AA855D85130B77B53AB5 /* Pods_AppBackFront.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		FAD0B4652EC6360A003E0F67 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FADE5D542EC4E60400DBDFCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAE77AB02E142E210011AA19 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		FAEF3DFB2F509E5900C2F78F /* NftFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAEF3DFE2F509F1900C2F78F /* NftFilterCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftFilterCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		FA2DCD672EDF384600282E93 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				FAEF3DF92F509E0F00C2F78F /* Cells */,
 				FA2DCD682EDF390F00282E93 /* Home */,
 				FADE5D522EC4DB1200DBDFCA /* Login */,
 			);
@@ -239,6 +244,31 @@
 			isa = PBXGroup;
 			children = (
 				FAE77AB02E142E210011AA19 /* LoginScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		FAEF3DF92F509E0F00C2F78F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAEF3DFA2F509E1500C2F78F /* NftFilter */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAEF3DFA2F509E1500C2F78F /* NftFilter */ = {
+			isa = PBXGroup;
+			children = (
+				FAEF3DFD2F509EF000C2F78F /* Screen */,
+				FAEF3DFB2F509E5900C2F78F /* NftFilterCollectionViewCell.swift */,
+			);
+			path = NftFilter;
+			sourceTree = "<group>";
+		};
+		FAEF3DFD2F509EF000C2F78F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				FAEF3DFE2F509F1900C2F78F /* NftFilterCollectionViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -346,13 +376,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -372,6 +398,8 @@
 				FA9457652ECB4D9600DBE62A /* String + extension.swift in Sources */,
 				FA2DCD6A2EDF395B00282E93 /* HomeVC.swift in Sources */,
 				FA0C96892E132BC50017A1AF /* AppDelegate.swift in Sources */,
+				FAEF3DFC2F509E5900C2F78F /* NftFilterCollectionViewCell.swift in Sources */,
+				FAEF3DFF2F509F1900C2F78F /* NftFilterCollectionViewCellScreen.swift in Sources */,
 				FA9CAE042F21278F0020452E /* GenericService.swift in Sources */,
 				FA9CAE022F2126E70020452E /* HomeService.swift in Sources */,
 				FA2DCD632ED74A1900282E93 /* AlertController.swift in Sources */,
