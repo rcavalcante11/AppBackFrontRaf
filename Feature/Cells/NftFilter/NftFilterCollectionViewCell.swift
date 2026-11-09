@@ -43,7 +43,7 @@ class NftFilterCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-    public func SetupCell(filter: FilterNft) {
+    public func setupCell(filter: FilterNft) {
         screen.filterLabel.text = filter.title ?? ""
         if filter.isSelected ?? false{
             screen.filterLabel.backgroundColor = .purple

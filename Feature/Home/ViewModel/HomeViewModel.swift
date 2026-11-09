@@ -50,5 +50,27 @@ class HomeViewModel {
         
     }
     
+    // MARK: - FilterCollectionView
+    
+    public var numberOfItensInSection: Int {
+        return nftData?.filterListNft?.count ?? 0
+    }
+    
+    
+    public func loadCurrentFilterNft(indexpath: IndexPath) -> FilterNft {
+        return nftData?.filterListNft?[indexpath.row] ?? FilterNft()
+    }
+    
+    public  var sizeForItemAt: CGSize {
+        return CGSize(width: 100, height: 34)
+    }
+    
+    
+    
+    
+    
     
 }
+
+
+
