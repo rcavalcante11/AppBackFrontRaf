@@ -12,6 +12,8 @@
 		FA0C968D2E132BC50017A1AF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C968C2E132BC50017A1AF /* LoginVC.swift */; };
 		FA0C96922E132BC60017A1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0C96912E132BC60017A1AF /* Assets.xcassets */; };
 		FA0C96952E132BC60017A1AF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA0C96942E132BC60017A1AF /* Base */; };
+		FA2A9BD630A222F100D7DF0F /* NftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A9BD530A222F100D7DF0F /* NftTableViewCell.swift */; };
+		FA2A9BD930A36BF700D7DF0F /* NftTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A9BD830A36BF700D7DF0F /* NftTableViewCellScreen.swift */; };
 		FA2DCD632ED74A1900282E93 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD622ED74A1900282E93 /* AlertController.swift */; };
 		FA2DCD662EDF34F400282E93 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD652EDF34F400282E93 /* TabBarVC.swift */; };
 		FA2DCD6A2EDF395B00282E93 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DCD692EDF395B00282E93 /* HomeVC.swift */; };
@@ -43,6 +45,8 @@
 		FA0C96912E132BC60017A1AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0C96942E132BC60017A1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0C96962E132BC60017A1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA2A9BD530A222F100D7DF0F /* NftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftTableViewCell.swift; sourceTree = "<group>"; };
+		FA2A9BD830A36BF700D7DF0F /* NftTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftTableViewCellScreen.swift; sourceTree = "<group>"; };
 		FA2DCD622ED74A1900282E93 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		FA2DCD652EDF34F400282E93 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		FA2DCD692EDF395B00282E93 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -127,6 +131,23 @@
 				FA0C96962E132BC60017A1AF /* Info.plist */,
 			);
 			path = AppBackFront;
+			sourceTree = "<group>";
+		};
+		FA2A9BD430A2227E00D7DF0F /* NftTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA2A9BD730A224E900D7DF0F /* Screen */,
+				FA2A9BD530A222F100D7DF0F /* NftTableViewCell.swift */,
+			);
+			path = NftTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA2A9BD730A224E900D7DF0F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				FA2A9BD830A36BF700D7DF0F /* NftTableViewCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		FA2DCD612ED7442900282E93 /* Alert */ = {
@@ -251,18 +272,19 @@
 		FAEF3DF92F509E0F00C2F78F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FAEF3DFA2F509E1500C2F78F /* NftFilter */,
+				FA2A9BD430A2227E00D7DF0F /* NftTableViewCell */,
+				FAEF3DFA2F509E1500C2F78F /* NftFilterCollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		FAEF3DFA2F509E1500C2F78F /* NftFilter */ = {
+		FAEF3DFA2F509E1500C2F78F /* NftFilterCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				FAEF3DFD2F509EF000C2F78F /* Screen */,
 				FAEF3DFB2F509E5900C2F78F /* NftFilterCollectionViewCell.swift */,
 			);
-			path = NftFilter;
+			path = NftFilterCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		FAEF3DFD2F509EF000C2F78F /* Screen */ = {
@@ -376,9 +398,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -408,6 +434,8 @@
 				FAD0B4662EC6360A003E0F67 /* UIViewController+Extension.swift in Sources */,
 				FA2DCD662EDF34F400282E93 /* TabBarVC.swift in Sources */,
 				FA0C968B2E132BC50017A1AF /* SceneDelegate.swift in Sources */,
+				FA2A9BD930A36BF700D7DF0F /* NftTableViewCellScreen.swift in Sources */,
+				FA2A9BD630A222F100D7DF0F /* NftTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
