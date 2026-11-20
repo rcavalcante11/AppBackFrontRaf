@@ -17,7 +17,6 @@ class NftFilterCollectionViewCell: UICollectionViewCell {
         let view = NftFilterCollectionViewCellScreen()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-        
     }()
     
     override init(frame: CGRect) {

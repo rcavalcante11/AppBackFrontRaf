@@ -22,8 +22,7 @@ class NftTableViewCellScreen: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 18
+
         return imageView
     }()
     
@@ -33,6 +32,7 @@ class NftTableViewCellScreen: UIView {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 24
+        imageView.tintColor = .black
         return imageView
     }()
     
@@ -71,7 +71,9 @@ class NftTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         addViews()
+        configConstraints()
     }
     
     func addViews() {
@@ -101,7 +103,26 @@ class NftTableViewCellScreen: UIView {
             nftImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor),
             nftImageView.heightAnchor.constraint(equalToConstant: 340),
             
+            userImageView.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 10),
+            userImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 8),
+            userImageView.heightAnchor.constraint(equalToConstant: 48),
+            userImageView.widthAnchor.constraint(equalToConstant: 48),
+            
+            ownedByPriceLabel.topAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: 20),
+            ownedByPriceLabel.leadingAnchor.constraint(equalTo: userImageView.leadingAnchor, constant: 8),
+            
+            userLabel.topAnchor.constraint(equalTo: ownedByPriceLabel.bottomAnchor, constant: 5),
+            userLabel.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: 8),
+            
+            priceLabel.topAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: 20),
+            priceLabel.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -15),
+            
+            priceValueLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 5),
+            priceValueLabel.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -15)
+            
+            
         ])
+        
     }
     
 }
