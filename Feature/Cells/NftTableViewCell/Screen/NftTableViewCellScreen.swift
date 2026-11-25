@@ -101,15 +101,15 @@ class NftTableViewCellScreen: UIView {
             nftImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor),
             nftImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor),
             nftImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor),
-            nftImageView.heightAnchor.constraint(equalToConstant: 340),
+            nftImageView.heightAnchor.constraint(equalToConstant: 270),
             
-            userImageView.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 10),
+            userImageView.topAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: 10),
             userImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 8),
             userImageView.heightAnchor.constraint(equalToConstant: 48),
             userImageView.widthAnchor.constraint(equalToConstant: 48),
             
             ownedByPriceLabel.topAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: 20),
-            ownedByPriceLabel.leadingAnchor.constraint(equalTo: userImageView.leadingAnchor, constant: 8),
+            ownedByPriceLabel.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: 8),
             
             userLabel.topAnchor.constraint(equalTo: ownedByPriceLabel.bottomAnchor, constant: 5),
             userLabel.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: 8),
